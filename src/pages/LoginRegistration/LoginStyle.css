@@ -59,6 +59,17 @@ body{
     border: none;
     outline: none;
     border-bottom: 2px solid #fff;
+    font-size: 16px;
+    color: #fff;
+    padding-right: 23px;
+    font-weight: 500;
+    transition: 0.5s; /*for bottom border when text up animated */
+}
+
+/*for bottom border when text up animated */
+.input-box input:focus,
+.input-box input:valid{
+    border-bottom-color: #0ef;
 }
 
 .input-box label{
@@ -69,7 +80,16 @@ body{
     font-size: 16px;
     color: #fff;
     pointer-events: none;
+    transition: 0.5s;   /* for text up animation */
 }
+
+/* For text up animation */
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    color: #0ef;
+}
+
 
 .input-box .icon{
     position: absolute;
@@ -78,6 +98,13 @@ body{
     transform: translateY(-50%);
     color: #fff;
     font-size: 18px;
+    transition: 0.5s;   /*for Change color of Icon  when text up animated */
+}
+
+/*for Change color of Icon  when text up animated */
+.input-box input:focus~.icon,
+.input-box input:valid~.icon{
+    color: #0ef;
 }
 
 .btn1{
@@ -92,6 +119,25 @@ body{
     font-size: 16px;
     color: #fff;
     font-weight: 600;
+    z-index: 1;
+    overflow: hidden;   /* hide overflow gradient color */
+}
+
+/* button animation */
+.btn1::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#081b29,#0ef,#081b29,#0ef);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn1:hover::before{
+    top: 0;
 }
 
 .form-box .logreg-link{
