@@ -1,4 +1,4 @@
-import { FaUser,FaLock } from "react-icons/fa";
+import { FaUser, FaLock } from "react-icons/fa";
 
 import './LoginStyle.css'
 
@@ -16,15 +16,19 @@ const LoginRegistration = () => {
                     <div className="input-box">
                         <input type="password" required />
                         <label>Password</label>
-                        <FaLock className="icon"/>
+                        <FaLock className="icon" />
                     </div>
                     <button type="submit" className="btn1">Login</button>
 
                     <div className="logreg-link">
                         <p>Do not have an account? <a href="#" className="register-link">Sign Up</a></p>
                     </div>
-
                 </form>
+            </div>
+            {/* Right side Login Text */}
+            <div className="info-text login">
+                <h2>Welcome Back !</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
             </div>
         </div>
     );
