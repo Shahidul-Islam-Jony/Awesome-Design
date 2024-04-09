@@ -159,6 +159,7 @@ body{
 }
 
 /* Login Info Right side text */
+
 .wrapper .info-text{
     position: absolute;
     top: 0;
@@ -189,7 +190,7 @@ body{
 
 
 
-/* BG divider design */
+/* BG divider design login */
 .wrapper .bg-animate{
     position: absolute;
     top: -4px;
@@ -199,8 +200,37 @@ body{
     border-bottom: 3px solid #0ef;
     background: linear-gradient(45deg,#081b29, #0ef);
     transform: rotate(10deg) skewY(40deg);      /*for rotating bg*/
+    /* transform: rotate(0) skewY(0); */     /*for rotating bg */
     transform-origin: bottom right;
 }
 
+/* BG divider design Registration */
+.wrapper .bg-animate2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    border-top: 3px solid #0ef;
+    background: #081b29;
+    /* transform: rotate(-11deg) skewY(-41deg); */    /* for rotating bg */
+    transform: rotate(0) skewY(0);      /*for rotating bg*/
+    transform-origin: bottom left;
+}
 
+
+/* Register page design */
+
+.wrapper .form-box.register{
+    right: 0;
+    padding: 0 40px 0 60px;
+    display: none;
+}
+
+.wrapper .info-text.register{
+    left: 0;
+    text-align: left;
+    padding: 0 150px 60px 40px;
+    display: none;
+}
 
