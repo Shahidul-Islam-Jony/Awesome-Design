@@ -5,6 +5,10 @@ import './LoginStyle.css'
 const LoginRegistration = () => {
     return (
         <div className="wrapper">
+            {/* BG Divider */}
+            <span className="bg-animate"></span>
+
+            {/* Login page */}
             <div className="form-box login">
                 <h2>Login</h2>
                 <form action="#">
