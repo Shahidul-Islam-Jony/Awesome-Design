@@ -202,6 +202,7 @@ body{
     transform: rotate(10deg) skewY(40deg);      /*for rotating bg*/
     transform-origin: bottom right;
     transition: 1.5s ease;  /* when changing background side */
+    transition-delay: 1.6s;
 }
 
 /* BG divider design Registration */
@@ -216,6 +217,7 @@ body{
     transform: rotate(0) skewY(0);      /*for rotating bg*/
     transform-origin: bottom left;
     transition: 1.5s ease;
+    transition-delay: 0.5s;
 }
 
 
@@ -243,6 +245,7 @@ body{
     transition: 0.7s ease;
     opacity: 1;
     filter: blur(0);
+    transition-delay: calc(0.1s* var(--j)); 
 }
 .wrapper.active .form-box.login .animation{
     transform: translateX(-120%);
@@ -256,6 +259,7 @@ body{
     transition: 0.7s ease;
     opacity: 1;
     filter: blur(0);
+    transition-delay: calc(0.1s* var(--j));   /* For smoothly comming login text*/
 }
 .wrapper.active .info-text.login .animation{
     transform: translateX(120%);
@@ -283,6 +287,7 @@ body{
     transition: 0.7s ease;
     opacity: 0;
     filter: blur(10px);
+    transition-delay: calc(0.1s* var(--j));
 }
 .wrapper.active .form-box.register .animation{
     transform: translateX(0);
@@ -296,6 +301,7 @@ body{
     transition: 0.7s ease;
     opacity: 0;
     filter: blur(10px);
+    transition-delay: calc(0.1s* var(--j));
 }
 .wrapper.active .info-text.register .animation{
     transform: translateX(0);
