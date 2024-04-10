@@ -81,7 +81,7 @@ body{
     transform: translateY(-50%);
     font-size: 16px;
     color: #fff;
-    pointer-events: none;
+    pointer-events: none;   /*Activing Login Link already have account*/
     transition: 0.5s;   /* for text up animation */
 }
 
@@ -200,8 +200,8 @@ body{
     border-bottom: 3px solid #0ef;
     background: linear-gradient(45deg,#081b29, #0ef);
     transform: rotate(10deg) skewY(40deg);      /*for rotating bg*/
-    /* transform: rotate(0) skewY(0); */     /*for rotating bg */
     transform-origin: bottom right;
+    transition: 1.5s ease;  /* when changing background side */
 }
 
 /* BG divider design Registration */
@@ -213,9 +213,9 @@ body{
     height: 700px;
     border-top: 3px solid #0ef;
     background: #081b29;
-    /* transform: rotate(-11deg) skewY(-41deg); */    /* for rotating bg */
     transform: rotate(0) skewY(0);      /*for rotating bg*/
     transform-origin: bottom left;
+    transition: 1.5s ease;
 }
 
 
@@ -224,25 +224,83 @@ body{
 .wrapper .form-box.register{
     right: 0;
     padding: 0 40px 0 60px;
-    display: none;
+    /* display: none; */
 }
 
 .wrapper .info-text.register{
     left: 0;
     text-align: left;
     padding: 0 150px 60px 40px;
-    display: none;
+    /* display: none; */
+    pointer-events: none;   /*Activing Sign Up link Don't have account */
 }
 
 /* handle switch Sign Up and Login Mode */
 
+/* hide login form */
 .wrapper .form-box.login .animation{
     transform: translateX(0);
     transition: 0.7s ease;
+    opacity: 1;
+    filter: blur(0);
 }
 .wrapper.active .form-box.login .animation{
     transform: translateX(-120%);
     transition-delay: calc(0.1s* var(--i));
+    opacity: 0;
+    filter: blur(10px);
+}
+/* hide right side login text */
+.wrapper .info-text.login .animation{
+    transform: translateX(0);
+    transition: 0.7s ease;
+    opacity: 1;
+    filter: blur(0);
+}
+.wrapper.active .info-text.login .animation{
+    transform: translateX(120%);
+    transition-delay: calc(0.1s* var(--i));     /*For smoothly hide in side*/
+    opacity: 0;
+    filter: blur(10px);
 }
 
+/* Switch background */
+.wrapper.active .bg-animate{
+    transform: rotate(0) skewY(0);  /* for rotating bg1 */
+    transition-delay: .5s;
+}
+/* Switch background 2 */
+.wrapper.active .bg-animate2{
+   transform: rotate(-11deg) skewY(-41deg);    /* for rotating bg2 */
+    transition-delay: 1.2s;
+}
+
+/* handle  switch regestration form */
+
+/* showing Reg form */
+.wrapper .form-box.register .animation{
+    transform: translateX(120%);
+    transition: 0.7s ease;
+    opacity: 0;
+    filter: blur(10px);
+}
+.wrapper.active .form-box.register .animation{
+    transform: translateX(0);
+    transition-delay: calc(0.1s* var(--i));
+    opacity: 1;
+    filter: blur(0);
+}
+/* showing left side Reg text */
+.wrapper .info-text.register .animation{
+    transform: translateX(-120%);
+    transition: 0.7s ease;
+    opacity: 0;
+    filter: blur(10px);
+}
+.wrapper.active .info-text.register .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(0.1s* var(--i));
+}
 

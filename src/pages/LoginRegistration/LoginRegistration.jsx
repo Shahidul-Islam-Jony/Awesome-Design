@@ -38,41 +38,41 @@ const LoginRegistration = () => {
             </div>
             {/* Right side Login Text */}
             <div className="info-text login">
-                <h2>Welcome Back !</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
+                <h2 className="animation" style={{'--i':0}}>Welcome Back !</h2>
+                <p className="animation" style={{'--i':1}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
             </div>
 
 
             {/* Registration page */}
             <div className="form-box register">
-                <h2>Sign Up</h2>
+                <h2 className="animation" style={{'--i':17}}>Sign Up</h2>
                 <form action="#">
-                    <div className="input-box">
+                    <div className="input-box animation" style={{'--i':18}}>
                         <input type="text" required />
                         <label>Username</label>
                         <FaUser className="icon" />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box animation" style={{'--i':19}}>
                         <input type="Email" required />
                         <label>Email</label>
                         <MdEmail className="icon" />
                     </div>
-                    <div className="input-box">
+                    <div className="input-box animation" style={{'--i':20}}>
                         <input type="password" required />
                         <label>Password</label>
                         <FaLock className="icon" />
                     </div>
-                    <button type="submit" className="btn1">Sign Up</button>
+                    <button type="submit" className="btn1 animation" style={{'--i':21}}>Sign Up</button>
 
-                    <div className="logreg-link">
-                        <p>Already have an account? <a href="#"  onClick={()=>setIsClicked(true)} className="login-link">Login</a></p>
+                    <div className="logreg-link animation" style={{'--i':22}}>
+                        <p>Already have an account? <a href="#"  onClick={()=>setIsClicked(false)} className="login-link">Login</a></p>
                     </div>
                 </form>
             </div>
             {/* Left side Register Text */}
             <div className="info-text register">
-                <h2>Welcome Back !</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
+                <h2 className="animation" style={{'--i':17}}>Welcome Back !</h2>
+                <p className="animation" style={{'--i':18}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
             </div>
 
         </div>
