@@ -234,3 +234,15 @@ body{
     display: none;
 }
 
+/* handle switch Sign Up and Login Mode */
+
+.wrapper .form-box.login .animation{
+    transform: translateX(0);
+    transition: 0.7s ease;
+}
+.wrapper.active .form-box.login .animation{
+    transform: translateX(-120%);
+    transition-delay: calc(0.1s* var(--i));
+}
+
+
